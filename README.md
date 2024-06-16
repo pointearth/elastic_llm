@@ -16,6 +16,7 @@ it is very important step! Need to config 1 node as ml node, otherwise, you can'
 login Kibana,
 "Machine Learning" ->"Model Management" ->"Trained Models"
 find model ".elser_model_2", download it and then deploy it.
+![image](https://github.com/pointearth/elastic_llm/assets/1859919/7baf5d19-ad82-4052-944d-ef24b2567f41)
 
 # 3. Config the Application
 ## 3.1 install process
@@ -38,11 +39,15 @@ in src/config file, input all the information:
 ```
 python src/save_doc.py
 ```
+![image](https://github.com/pointearth/elastic_llm/assets/1859919/cb0e03b5-5d60-4902-86ce-385944f4fcb4)
+
 you can change the documents in the code.
 ## 4.2 ask question
 ```
 python src/question.py
 ```
+<img width="844" alt="image" src="https://github.com/pointearth/elastic_llm/assets/1859919/db02be15-ac88-4411-adce-7fd11a5e9e09">
+
 you can change questions in the code
 # 5. exist venv
 ```
