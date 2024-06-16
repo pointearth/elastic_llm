@@ -1,6 +1,9 @@
 # 0. Description
-LangChain and Elastic work together, you also can use them, but you have to write a lot of code to collaborate on elasticsearch keywords search and vector search, after this update, you can use them without knowing any details.  both of them are kings in their areas, so I am curious, about how powerful it will be. Based on https://www.elastic.co/search-labs/blog/langchain-collaboration
-I found that it is still a little bit difficult to use it. so i created this application to test it. 
+LangChain and Elastic work together, you also can use them, but you have to write a lot of code to collaborate on elasticsearch keywords search and vector search. You can use them without knowing any details after this update.
+
+Both of them are kings in their areas, so I am curious, about how powerful it will be. Based on https://www.elastic.co/search-labs/blog/langchain-collaboration
+
+I found that it is still a little bit difficult to use it. so I created this application to test it. you also can use ElasticLlm class to create your own LLM application.
 # 1. GET OPENAI API_KEY
 get a api_key from https://platform.openai.com/api-keys
 
