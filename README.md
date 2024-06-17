@@ -16,27 +16,27 @@ I found that it is still a little bit difficult to use it. so I created this app
 # 1. GET OPENAI API_KEY
 get a api_key from https://platform.openai.com/api-keys
 
-# 2. config elastic cloud
-## 2.1 register
+# 2. config elastic
+## 2.1 register cloud
 https://www.elastic.co/cloud/cloud-trial-overview
-register a 15 days trail elasticsearch, collect cloud id and create a es_api_key
-## 2.2 (Alternative) Install a elasticsearch and Kibana on-premises
-the configuration is a little bit complex, not prefer to beginners.
-## 2.2 config ML node
-it is very important step! Need to config 1 node as ml node, otherwise, you can't deploy your mode, because there is no ml node by default. 
+register a 15 day trail elasticsearch, collect cloud id and create a es_api_key
+## 2.2 (Alternative) Install an elasticsearch and Kibana on-premises
+the configuration is a little bit complex, and not preferred for beginners. I registered the model and wrote documents into elasticsearch, but I can't retrieve them. there is the report https://github.com/elastic/elasticsearch/issues/109778 
+## 2.2 Config ML node
+it is a very important step! Need to configure 1 node as an ML node, otherwise, you can't deploy your mode, because there is no ML node by default. 
 go to "cloud" -> "deployments" -><your deployment"(My deployment)
 <img width="998" alt="image" src="https://github.com/pointearth/elastic_llm/assets/1859919/b835fef4-b8a9-499b-843f-ad1223ecd703">
-you need to add an ML node or edit an instance, change it as an ML node. 
+you need to add an ML node or edit an instance, and change it as an ML node. 
 ![image](https://github.com/pointearth/elastic_llm/assets/1859919/76093dd6-3848-43df-95a9-03aad419905e)
 
-"Machine Learning instances" -> "Minimum size per zone" as following:
+"Machine Learning instances" -> "Minimum size per zone" as follows:
 ![image](https://github.com/pointearth/elastic_llm/assets/1859919/c0a772d3-7c61-4d5b-a2c2-1926632ea99f)
-I also close whatever functions you don't need, save them, then you get:
+I also close whatever functions you don't need, save them, and then you get:
 <img width="380" alt="image" src="https://github.com/pointearth/elastic_llm/assets/1859919/e5eb59fe-3a3c-4ba1-94d0-bf4533923693">
 then, go to "Machine Learning"-> "overview", you can see the node:
 <img width="1409" alt="image" src="https://github.com/pointearth/elastic_llm/assets/1859919/8626fd06-abaf-49eb-9237-2989aea1934b">
 and you you go to next step to deploy a model into this node.
-## 2.3 deploy model in elasticsearch
+## 2.3 Deploy model in elasticsearch
 login Kibana,
 "Machine Learning" ->"Model Management" ->"Trained Models"
 find model ".elser_model_2", download it and then deploy it.
@@ -45,7 +45,7 @@ find model ".elser_model_2", download it and then deploy it.
 you can check that your model are running on your ML node at "Machine Learning"-> "overview":
 ![image](https://github.com/pointearth/elastic_llm/assets/1859919/b94172d6-4ae3-48d5-b007-352e891b3f11)
 
-All settings on Elastic cloud is done!
+All settings on Elastic Cloud are done!
 
 # 3. Config the Application
 ## 3.1 install process
