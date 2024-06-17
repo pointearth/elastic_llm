@@ -22,13 +22,30 @@ https://www.elastic.co/cloud/cloud-trial-overview
 register a 15 days trail elasticsearch, collect cloud id and create a es_api_key
 ## 2.2 (Alternative) Install a elasticsearch and Kibana on-premises
 the configuration is a little bit complex, not prefer to beginners.
-## 2.2 config ML node (TO-DO)
+## 2.2 config ML node
 it is very important step! Need to config 1 node as ml node, otherwise, you can't deploy your mode, because there is no ml node by default. 
+go to "cloud" -> "deployments" -><your deployment"(My deployment)
+<img width="998" alt="image" src="https://github.com/pointearth/elastic_llm/assets/1859919/b835fef4-b8a9-499b-843f-ad1223ecd703">
+you need to add an ML node or edit an instance, change it as an ML node. 
+![image](https://github.com/pointearth/elastic_llm/assets/1859919/76093dd6-3848-43df-95a9-03aad419905e)
+
+"Machine Learning instances" -> "Minimum size per zone" as following:
+![image](https://github.com/pointearth/elastic_llm/assets/1859919/c0a772d3-7c61-4d5b-a2c2-1926632ea99f)
+I also close whatever functions you don't need, save them, then you get:
+<img width="380" alt="image" src="https://github.com/pointearth/elastic_llm/assets/1859919/e5eb59fe-3a3c-4ba1-94d0-bf4533923693">
+then, go to "Machine Learning"-> "overview", you can see the node:
+<img width="1409" alt="image" src="https://github.com/pointearth/elastic_llm/assets/1859919/8626fd06-abaf-49eb-9237-2989aea1934b">
+and you you go to next step to deploy a model into this node.
 ## 2.3 deploy model in elasticsearch
 login Kibana,
 "Machine Learning" ->"Model Management" ->"Trained Models"
 find model ".elser_model_2", download it and then deploy it.
 ![image](https://github.com/pointearth/elastic_llm/assets/1859919/7baf5d19-ad82-4052-944d-ef24b2567f41)
+
+you can check that your model are running on your ML node at "Machine Learning"-> "overview":
+![image](https://github.com/pointearth/elastic_llm/assets/1859919/b94172d6-4ae3-48d5-b007-352e891b3f11)
+
+All settings on Elastic cloud is done!
 
 # 3. Config the Application
 ## 3.1 install process
