@@ -1,7 +1,16 @@
 # 0. Description
-LangChain and Elastic work together, you also can use them, but you have to write a lot of code to collaborate on elasticsearch keywords search and vector search. You can use them without knowing any details after this update.
+LangChain and Elastic Collaborate to Enhance RAG with Vector Database and Semantic Reranking https://lnkd.in/eVXPUiDY
 
-Both of them are kings in their areas, so I am curious, about how powerful it will be. Based on https://www.elastic.co/search-labs/blog/langchain-collaboration
+Given the expertise and prominence of both LangChain and Elastic in their respective domains, their collaboration promises significant advancements. Let's delve into the specifics of what makes this integration so powerful.
+
+Elasticsearch Capabilities:
+- Advanced Search Functionalities: Elasticsearch is renowned for its powerful and popular open-source search engine capabilities. It surpasses traditional BM25 keyword search by enabling complex search functionalities such as filtering, sorting, and advanced querying using "must" and "should" conditions. This enhances the accuracy of search results, ensuring that the materials sent to the LLM are of higher quality, thereby improving the overall quality of answers.
+- Versatility in Search: By offering both keyword and vector search capabilities, Elasticsearch caters to various scenarios, compensating for the limitations of each method. This dual approach ensures comprehensive coverage of search requirements.
+- Robust Distributed System: Elasticsearch is a stable distributed system that supports multiple nodes, redundant shards, and includes built-in analysis and monitoring tools. This eliminates the need for creating a custom system, providing a reliable and scalable solution out of the box.
+
+Practical Implementation:
+The Elastic team has provided an article and accompanying code to demonstrate the integration. However, the complexity of the implementation requires a thorough understanding of the details to succeed. To facilitate this, I am writing a project to create a class that simplifies the use of these tools. This will help you leverage the combined power of LangChain and Elasticsearch more easily and effectively.
+By combining Elasticsearch's robust search capabilities with LangChain's advanced language processing, this collaboration is set to significantly enhance the performance and applicability of RAG (Retrieval-Augmented Generation) systems, particularly in handling big data and complex scenarios.
 
 I found that it is still a little bit difficult to use it. so I created this application to test it. you also can use ElasticLlm class to create your own LLM application.
 # 1. GET OPENAI API_KEY
